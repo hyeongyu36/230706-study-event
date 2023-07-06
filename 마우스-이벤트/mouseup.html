@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouseup</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(38, 92, 76);
+        border: 2px solid black;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .box.up {
+        background-color: rgb(134, 185, 83);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mouseup이벤트</h1>
+    <div class="box" onmouseup="handleMouseUp()"></div>
+    <script>
+      function handleMouseUp() {
+        var box = document.querySelector(".box");
+        box.classList.add("up");
+      }
+    </script>
+  </body>
+</html>

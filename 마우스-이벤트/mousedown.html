@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mousedown</title>
+    <style>
+      .box{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border: 2px solid black;
+        transition: background-color 0.3s;
+      }
+      .box.clicked{
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button onmousedown="handleMousedown()">클릭하세요</button>
+    <script>
+      function handleMousedown() {
+        alert("버튼이 클릭되었습니다.");
+      } -->
+    <!-- </script> -->
+    <h1>Mousedown이벤트</h1>
+    <div class="box" onmousedown="handleMouseDown(this)"></div>
+    <script>
+      function handleMouseDown(element){
+        element.classList.add("clicked");
+      }
+    </script>
+  </body>
+</html>

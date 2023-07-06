@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keyup</title>
+    <style>
+      .contain {
+        width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 15px 20px;
+        margin: auto;
+        position: relative;
+      }
+      img {
+        width: 300px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        /* position: absolute; */
+      }
+      button {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 5px;
+        border: 1px solid orange;
+        border-radius: 3px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contain">
+      <img src="뚱스터.jpg" alt="뚱" />
+      <button class="over" id="open" onclick="toggleDetail()">
+        상세 설명 보기
+      </button>
+      <div id="desc" class="box">
+        <h3>햄스터</h3>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          eaque, nesciunt aut quia, distinctio doloremque quo dolorem mollitia
+          excepturi incidunt sit exercitationem labore ipsam, dignissimos sed
+          error vitae provident laborum!</span
+        >
+        <!-- <button class="btn2" id="close" onclick="hideDetail()">
+          상세 설명 닫기
+        </button> -->
+      </div>
+    </div>
+
+    <script>
+      function toggleDetail() {
+        var desc = document.querySelector("#desc");
+        var openButton = document.querySelector("#open");
+        if (desc.style.display === '' || desc.style.display === 'none') {
+          desc.style.display = 'block';
+          openButton.innerText = '상세 설명 닫기';
+        } else {
+          desc.style.display = 'none';
+          openButton.innerText = '상세 설명 보기';
+        }
+      }
+    </script>
+  </body>
+</html>
