@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼이벤트-focus</title>
+</head>
+<body>
+    <h1>focus 이벤트</h1>
+    <input type="text" id="input" placeholder="이름을 입력하세요">
+    <script>
+        var input = document.querySelector("#input");
+        input.addEventListener("focus", function(){
+            alert("입력 필드가 선택되었습니다.")
+        })
+    </script>
+</body>
+</html>

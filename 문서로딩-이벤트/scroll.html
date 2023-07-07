@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrol이벤트</title>
+    <style>
+      .container {
+        height: 2000px;
+      }
+      .image {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .image.show {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>scroll 이벤트</h1>
+    <div class="container">
+      <img src="뚱스터.jpg" alt="뚱" class="image" />
+    </div>
+    <script>
+      function handleScroll() {
+        var image = document.querySelector(".image");
+        var imagePosition = image.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+        if (imagePosition < windowHeight) {
+          image.classList.add("show");
+        }
+      }
+      window.addEventListener("scroll", handleScroll);
+    </script>
+  </body>
+</html>

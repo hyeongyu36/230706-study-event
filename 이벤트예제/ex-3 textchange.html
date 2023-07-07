@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버튼-글자색 변경</title>
+  </head>
+  <style>
+    .contain {
+      width: 500px;
+      height: auto;
+      margin: auto;
+      padding: 20px;
+    }
+    .text {
+      width: 500px;
+      height: auto;
+      margin-top: 10px;
+    }
+    .change {
+      color: green;
+    }
+  </style>
+  <body>
+    <div class="contain">
+      <button onclick="changeTextColor()" id="change">글자색 바꾸기</button>
+      <div class="text">
+        <span
+          >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
+          recusandae consectetur saepe ratione neque labore dolorum ad, mollitia
+          iure natus tempora fugit nostrum, aliquid suscipit, quos autem veniam
+          libero reprehenderit. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Omnis laborum assumenda excepturi dolorem sunt non,
+          repudiandae culpa officia quo dolorum at. Et vitae sint porro, illum
+          tempore dignissimos. Sapiente, possimus!
+        </span>
+      </div>
+    </div>
+
+    <script>
+      //   토글로 색상변경
+      //   function changeTextColor() {
+      //     var textColor = document.querySelector(".text");
+      //     textColor.classList.toggle("change");
+      //   }
+
+      // 스타일로 색상변경
+      //   function changeTextColor() {
+      //     var textColor = document.querySelector("span");
+      //     textColor.style.color = "green";
+      //   }
+
+      // 랜덤 색상변경
+      function changeTextColor() {
+        var paragraph = document.querySelector("span");
+        var colors = ["yellowgreen", "orangered", "lightblue", "lightpink"];
+        var randomIndex = Math.floor(Math.random() * colors.length);
+        var randomColor = colors[randomIndex];
+        paragraph.style.color = randomColor;
+      }
+    </script>
+  </body>
+</html>

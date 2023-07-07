@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼이벤트-blur2</title>
+  </head>
+  <body>
+    <h1>blur 이벤트</h1>
+    <input type="text" id="name" placeholder="이름을 입력하세요." />
+    <span id="nameError" style="color: red;"></span>
+    <script>
+      var nameInput = document.getElementById("name");
+      var nameError = document.getElementById("nameError");
+      nameInput.addEventListener("blur", function () {
+        var nameValue = nameInput.value.trim();
+        if (nameValue === "") {
+          nameError.textContent = "이름을 입력해주세요.";
+          nameError.style.display = "inline";
+        } else {
+          nameError.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
